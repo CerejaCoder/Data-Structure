@@ -1,0 +1,26 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "description": "A repository dedicated to data structures.",
+  "keywords": [
+    "data-structure",
+    "Stack",
+    "Queue",
+    "Dequeu"
+  ],
+  "homepage": "https://github.com/CerejaCoder/Data-Structure#readme",
+  "bugs": {
+    "url": "https://github.com/CerejaCoder/Data-Structure/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CerejaCoder/Data-Structure.git"
+  },
+  "license": "ISC",
+  "author": "Guilherme Cereja",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
