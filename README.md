@@ -19,14 +19,14 @@ Operações disponíveis:
 
 #### Complexidade
 
-| Operação    | Complexidade |
-| ----------- | ------------ |
-| `push()`    | O(1)         |
-| `pop()`     | O(1)         |
-| `peek()`    | O(1)         |
-| `isEmpty()` | O(1)         |
-| `size()`    | O(1)         |
-| `clear()`   | O(1)         |
+| Operação | Complexidade |
+|---|---|
+| `push()` | O(1) |
+| `pop()` | O(1) |
+| `peek()` | O(1) |
+| `isEmpty()` | O(1) |
+| `size()` | O(1) |
+| `clear()` | O(1) |
 
 ---
 
@@ -44,13 +44,13 @@ Operações disponíveis:
 
 #### Complexidade
 
-| Operação    | Complexidade |
-| ----------- | ------------ |
-| `enqueue()` | O(1)         |
-| `dequeue()` | O(1)         |
-| `front()`   | O(1)         |
-| `isEmpty()` | O(1)         |
-| `size()`    | O(1)         |
+| Operação | Complexidade |
+|---|---|
+| `enqueue()` | O(1) |
+| `dequeue()` | O(1) |
+| `front()` | O(1) |
+| `isEmpty()` | O(1) |
+| `size()` | O(1) |
 
 ---
 
@@ -74,19 +74,63 @@ Operações disponíveis:
 
 #### Complexidade
 
-| Operação        | Complexidade |
-| --------------- | ------------ |
-| `addFront()`    | O(n)*        |
-| `addBack()`     | O(1)         |
-| `removeFront()` | O(1)         |
-| `removeBack()`  | O(1)         |
-| `peekFront()`   | O(1)         |
-| `peekBack()`    | O(1)         |
-| `isEmpty()`     | O(1)         |
-| `size()`        | O(1)         |
-| `clear()`       | O(1)         |
+| Operação | Complexidade |
+|---|---|
+| `addFront()` | O(n)* |
+| `addBack()` | O(1) |
+| `removeFront()` | O(1) |
+| `removeBack()` | O(1) |
+| `peekFront()` | O(1) |
+| `peekBack()` | O(1) |
+| `isEmpty()` | O(1) |
+| `size()` | O(1) |
+| `clear()` | O(1) |
 
 * `addFront()` possui complexidade **O(1)** quando existe espaço disponível antes do primeiro elemento. Caso seja necessário deslocar os elementos, sua complexidade é **O(n)**.
+
+---
+
+### Linked List
+
+Uma **Linked List (Lista Simplesmente Encadeada)** é uma estrutura linear composta por nós (*nodes*), em que cada nó armazena um valor e uma referência para o próximo nó. A lista mantém uma referência para o primeiro nó (`head`) e controla a quantidade de elementos por meio de `count`.
+
+Operações disponíveis:
+
+* `addFront(node)` — adiciona um nó no início da lista.
+* `addBack(node)` — adiciona um nó no final da lista.
+* `insertAt(node, index)` — insere um nó em uma posição específica.
+* `removeFront()` — remove e retorna o primeiro nó.
+* `removeBack()` — remove e retorna o último nó.
+* `removeAt(index)` — remove e retorna o nó de uma posição específica.
+* `contains(value)` — verifica se um valor existe na lista.
+* `getElementAt(index)` — retorna o nó de uma posição específica sem removê-lo.
+* `indexOf(value)` — retorna o índice da primeira ocorrência de um valor.
+* `isEmpty()` — verifica se a lista está vazia.
+* `size()` — retorna a quantidade de nós.
+* `clear()` — remove todos os nós da lista.
+* `toString()` — retorna uma representação textual dos valores da lista.
+
+#### Complexidade
+
+Considerando uma lista com `n` elementos:
+
+| Operação | Complexidade |
+|---|---|
+| `addFront()` | O(1) |
+| `addBack()` | O(n) |
+| `insertAt()` | O(n) |
+| `removeFront()` | O(1) |
+| `removeBack()` | O(n) |
+| `removeAt()` | O(n) |
+| `contains()` | O(n) |
+| `getElementAt()` | O(n) |
+| `indexOf()` | O(n) |
+| `isEmpty()` | O(1) |
+| `size()` | O(1) |
+| `clear()` | O(1) |
+| `toString()` | O(n) |
+
+* As complexidades de inserção e remoção por posição consideram o pior caso. `getElementAt(0)` pode ser executado em O(1), pois o primeiro nó já está acessível por `head`.
 
 ---
 
@@ -105,7 +149,7 @@ A ideia é expandir o repositório gradualmente com novas estruturas, como:
 * [x] Stack
 * [x] Queue
 * [x] Deque
-* [ ] Linked List
+* [x] Linked List
 * [ ] Doubly Linked List
 * [ ] Circular Linked List
 * [ ] Priority Queue
@@ -124,9 +168,11 @@ Durante o desenvolvimento das estruturas, também são praticados conceitos como
 * Complexidade de tempo
 * Complexidade de espaço
 * FIFO e LIFO
+* Nós e referências
 * Classes em JavaScript
 * Módulos ES (`import` / `export`)
 * Manipulação de objetos
+* Percurso e busca em estruturas lineares
 
 ---
 
