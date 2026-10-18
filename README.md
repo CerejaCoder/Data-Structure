@@ -134,6 +134,50 @@ Considerando uma lista com `n` elementos:
 
 ---
 
+### Doubly Linked List
+
+Uma **Doubly Linked List (Lista Duplamente Encadeada)** é uma estrutura linear composta por nós (*nodes*), onde cada nó armazena um valor, uma referência para o próximo nó (`next`) e uma referência para o nó anterior (`previous`). A lista mantém referências tanto para o início (`head`) quanto para o fim (`tail`), otimizando operações nas duas extremidades.
+
+Operações disponíveis:
+
+* `addFront(node)` — adiciona um nó no início da lista.
+* `addBack(node)` — adiciona um nó no final da lista.
+* `insertAt(node, index)` — insere um nó em uma posição específica.
+* `removeFront()` — remove e retorna o primeiro nó.
+* `removeBack()` — remove e retorna o último nó.
+* `removeAt(index)` — remove e retorna o nó de uma posição específica.
+* `remove(node)` — remove um nó específico pelo valor.
+* `indexOf(node)` — retorna o índice da primeira ocorrência de um valor (ou `-1` caso não exista).
+* `peekFront()` — retorna o primeiro nó sem removê-lo.
+* `peekBack()` — retorna o último nó sem removê-lo.
+* `isEmpty()` — verifica se a lista está vazia.
+* `size()` — retorna a quantidade de nós.
+* `clear()` — remove todos os nós da lista.
+* `toString()` — retorna uma representação textual dos valores da lista.
+
+#### Complexidade
+
+Considerando uma lista com `n` elementos:
+
+| Operação | Complexidade |
+|---|---|
+| `addFront()` | O(1) |
+| `addBack()` | O(1) |
+| `insertAt()` | O(n) |
+| `removeFront()` | O(1) |
+| `removeBack()` | O(1) |
+| `removeAt()` | O(n) |
+| `remove()` | O(n) |
+| `indexOf()` | O(n) |
+| `peekFront()` | O(1) |
+| `peekBack()` | O(1) |
+| `isEmpty()` | O(1) |
+| `size()` | O(1) |
+| `clear()` | O(1) |
+| `toString()` | O(n) |
+
+---
+
 ## 🛠️ Tecnologias
 
 * JavaScript
@@ -150,7 +194,7 @@ A ideia é expandir o repositório gradualmente com novas estruturas, como:
 * [x] Queue
 * [x] Deque
 * [x] Linked List
-* [ ] Doubly Linked List
+* [x] Doubly Linked List
 * [ ] Circular Linked List
 * [ ] Priority Queue
 * [ ] Hash Table
@@ -168,7 +212,7 @@ Durante o desenvolvimento das estruturas, também são praticados conceitos como
 * Complexidade de tempo
 * Complexidade de espaço
 * FIFO e LIFO
-* Nós e referências
+* Nós e referências (simples e duplos)
 * Classes em JavaScript
 * Módulos ES (`import` / `export`)
 * Manipulação de objetos
