@@ -178,6 +178,46 @@ Considerando uma lista com `n` elementos:
 
 ---
 
+### Set
+
+Um **Set (Conjunto)** é uma coleção não ordenada de elementos únicos (sem duplicatas). Esta implementação utiliza um objeto JavaScript como estrutura base para garantir buscas rápidas e suportar operações matemáticas de teoria dos conjuntos.
+
+Operações disponíveis:
+
+* `add(value)` — adiciona um elemento único ao conjunto (retorna `true` se inserido, `false` se já existir).
+* `remove(value)` — remove um elemento do conjunto.
+* `has(value)` — verifica se um elemento pertence ao conjunto.
+* `values()` — retorna um array com todos os elementos presentes no conjunto.
+* `union(otherSet)` — retorna um novo conjunto com a união dos elementos de dois conjuntos.
+* `intersection(otherSet)` — retorna um novo conjunto apenas com os elementos presentes em ambos os conjuntos.
+* `difference(otherSet)` — retorna um novo conjunto com os elementos presentes no conjunto atual, mas ausentes no conjunto informado.
+* `isSubsetOf(otherSet)` — verifica se o conjunto atual é um subconjunto de outro conjunto.
+* `clear()` — remove todos os elementos do conjunto.
+* `size()` — retorna a quantidade de elementos.
+* `isEmpty()` — verifica se o conjunto está vazio.
+
+#### Complexidade
+
+Considerando conjuntos com `n` elementos no conjunto atual e `m` elementos no outro conjunto:
+
+| Operação | Complexidade |
+|---|---|
+| `add()` | O(1) |
+| `remove()` | O(1) |
+| `has()` | O(1) |
+| `values()` | O(n) |
+| `union()` | O(n + m) |
+| `intersection()` | O(n) |
+| `difference()` | O(n) |
+| `isSubsetOf()` | O(n) |
+| `clear()` | O(1) |
+| `size()` | O(n)* |
+| `isEmpty()` | O(n)* |
+
+* `size()` e `isEmpty()` possuem complexidade **O(n)** pois utilizam `Object.values()` internamente.
+
+---
+
 ## 🛠️ Tecnologias
 
 * JavaScript
@@ -195,6 +235,7 @@ A ideia é expandir o repositório gradualmente com novas estruturas, como:
 * [x] Deque
 * [x] Linked List
 * [x] Doubly Linked List
+* [x] Set
 * [ ] Circular Linked List
 * [ ] Priority Queue
 * [ ] Hash Table
@@ -213,10 +254,11 @@ Durante o desenvolvimento das estruturas, também são praticados conceitos como
 * Complexidade de espaço
 * FIFO e LIFO
 * Nós e referências (simples e duplos)
+* Teoria dos Conjuntos (União, Interseção, Diferença, Subconjunto)
 * Classes em JavaScript
 * Módulos ES (`import` / `export`)
 * Manipulação de objetos
-* Percurso e busca em estruturas lineares
+* Percurso e busca em estruturas lineares e coleções não ordenadas
 
 ---
 
