@@ -2,6 +2,12 @@
 
 Implementação de estruturas de dados em **JavaScript**, desenvolvidas com o objetivo de praticar conceitos fundamentais de estruturas de dados, complexidade de algoritmos e programação orientada a objetos.
 
+## 📖 Referências
+
+As implementações e os conceitos deste repositório foram desenvolvidos como parte dos meus estudos práticos a partir do livro:
+
+- **Learning JavaScript Data Structures and Algorithms** — *Loiane Groner* (Packt Publishing)
+
 ## 📚 Estruturas implementadas
 
 ### Stack
@@ -218,6 +224,28 @@ Considerando conjuntos com `n` elementos no conjunto atual e `m` elementos no ou
 
 ---
 
+### Hash Table
+
+Uma **Hash Table (Tabela Hash)** é uma estrutura que mapeia chaves a valores utilizando uma função hash para calcular o índice do bucket correspondente. Esta implementação utiliza **Separate Chaining (Encadeamento Separado)** com a estrutura de **Lista Ligada (`Linkedlist`)** para gerenciar colisões de forma eficiente.
+
+Operações disponíveis:
+
+* `put(key, value)` — adiciona um novo par chave-valor ou atualiza o valor caso a chave já exista.
+* `get(key)` — retorna o valor associado à chave ou `undefined` caso não seja encontrada.
+* `remove(key)` — remove o par chave-valor correspondente.
+
+#### Complexidade
+
+| Operação | Complexidade Média | Complexidade Pior Caso |
+|---|---|---|
+| `put()` | O(1) | O(n) |
+| `get()` | O(1) | O(n) |
+| `remove()` | O(1) | O(n) |
+
+- O pior caso (**O(n)**) ocorre quando há muitas colisões e todos os elementos terminam concentrados na mesma lista ligada.
+
+---
+
 ## 🛠️ Tecnologias
 
 * JavaScript
@@ -238,7 +266,7 @@ A ideia é expandir o repositório gradualmente com novas estruturas, como:
 * [x] Set
 * [ ] Circular Linked List
 * [ ] Priority Queue
-* [ ] Hash Table
+* [x] Hash Table
 * [ ] Tree
 * [ ] Binary Search Tree
 * [ ] Heap
@@ -255,6 +283,8 @@ Durante o desenvolvimento das estruturas, também são praticados conceitos como
 * FIFO e LIFO
 * Nós e referências (simples e duplos)
 * Teoria dos Conjuntos (União, Interseção, Diferença, Subconjunto)
+* Funções de hash e normalização de chaves (`toStringFn`)
+* Tratamento de colisões por encadeamento separado (*Separate Chaining*)
 * Classes em JavaScript
 * Módulos ES (`import` / `export`)
 * Manipulação de objetos
